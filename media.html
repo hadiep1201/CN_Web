@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Media - Blakletterpress</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<style>
+		/* Ép toàn bộ trang dùng font chuẩn để không bị lỗi chữ tiếng Việt */
+		* { font-family: Arial, Helvetica, sans-serif !important; }
+
+		/* CSS cơ bản cho nội dung trang Media */
+		.article-content { background: #fff; padding: 20px; box-sizing: border-box; }
+		.article-content h2 { font-size: 24px; color: #333; margin-bottom: 5px; }
+		.article-content h3 { font-size: 18px; color: #222; text-align: center; margin-top: 25px; margin-bottom: 15px;}
+		.meta { font-size: 13px; color: #777; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+		figure { margin: 0 0 20px 0; text-align: center; }
+		figure img { max-width: 100%; height: auto; border: 1px solid #ddd; padding: 3px;}
+		figcaption { font-size: 13px; font-style: italic; color: #555; margin-top: 8px; }
+		.article-content p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+		video, audio, iframe { width: 100%; max-width: 100%; border-radius: 5px; outline: none; }
+		.media-container { text-align: center; margin-bottom: 20px; }
+	</style>
+</head>
+<body>
+	<div id="page">
+		<!-- HEADER -->
+		<div id="header">
+			<div id="motto">
+				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="SiteName"></a>
+				<p><img src="images/header-text.png" height="14" width="218" alt="Text"></p>
+			</div>
+			<div id="logo"><a href="index.html"><img src="images/logo.png" alt="LOGO"></a></div>
+			<div id="searchbar">
+				<form action="#" method="post">
+					<input type="text" value="Enter search query" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+					<input type="submit" value="Search" class="btn">
+				</form>
+			</div>
+		</div>
+
+		<!-- CONTENTS -->
+		<div id="contents">
+			<div id="main">
+				<!-- NỘI DUNG TRANG MEDIA SỬ DỤNG THẺ HTML5 -->
+				<article class="article-content">
+					<header>
+						<h2>Ngày hội Công nghệ Xanh 2026</h2>
+						<p class="meta">22/04/2026 - Tác giả: <a href="#" style="color: #228B22;">Ban tổ chức Blakletterpress</a></p>
+					</header>
+
+					<figure>
+						<img src="images/team-large.jpg" alt="Hội trường chính"> 
+						<figcaption>Hội trường chính trong ngày khai mạc sự kiện năm 2025.</figcaption>
+					</figure>
+
+					<section>
+						<h3>Giới thiệu sự kiện</h3>
+						<p>Ngày hội Công nghệ Xanh 2026 quy tụ các diễn giả và doanh nghiệp theo đuổi giải pháp công nghệ bền vững. Sự kiện gồm chuỗi tọa đàm, khu trưng bày sản phẩm và các buổi kết nối dành cho sinh viên.</p>
+					</section>
+
+					<section>
+						<h3>Video giới thiệu</h3>
+						<div class="media-container">
+							<!-- Thẻ Video HTML5 -->
+							<video controls>
+								<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+								Trình duyệt của bạn không hỗ trợ thẻ video.
+							</video>
+						</div>
+					</section>
+
+					<section>
+						<h3>Podcast: Trò chuyện cùng diễn giả</h3>
+						<p style="text-align: center;">Nghe lại buổi phỏng vấn khách mời chính của chương trình:</p>
+						<div class="media-container">
+							<!-- Thẻ Audio HTML5 -->
+							<audio controls style="width: 80%;">
+								<source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+								Trình duyệt của bạn không hỗ trợ thẻ audio.
+							</audio>
+						</div>
+					</section>
+
+					<section>
+						<h3>Địa điểm tổ chức</h3>
+						<p style="text-align: center;">Sự kiện diễn ra tại Hà Nội. Xem bản đồ đường đi bên dưới:</p>
+						<div class="media-container">
+							<!-- Thẻ nhúng iframe Google Map -->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119175.91896898495!2d105.76288647712316!3d21.022736015509787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1714012015309!5m2!1svi!2s" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</section>
+				</article>
+			</div>
+
+			<!-- SIDEBAR -->
+			<div id="sidebar">
+				<div id="navigation">
+					<div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div id="connect">
+						<h2>Connect with us:</h2>
+						<a href="#" class="twitter"></a> <a href="#" class="facebook"></a> <a href="#" class="googleplus"></a>
+					</div>
+				</div>
+				<div class="section">
+					<div id="posts">
+						<h2>Placeholder</h2>
+						<ul>
+							<li>
+								<h5>Title Sample One</h5>
+								<p>Lorem ipsum dolor sit amet...</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+							<li>
+								<h5>Title Sample Two</h5>
+								<p>Lorem ipsum dolor sit amet...</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+						</ul>
+						<a href="news.html" class="btn2">View More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div id="footer">
+			<div>
+				<ul id="featured">
+					<li><a href="index.html" class="home"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="bell"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="globe"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="pencil"></a><p>This website template has been designed...</p></li>
+				</ul>
+				<p id="footnote">© Copyright © 2011.Company name all rights reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

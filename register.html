@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng ký nhận thông tin - Blakletterpress</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<style>
+		* { font-family: Arial, Helvetica, sans-serif !important; }
+		#main form { background: #fff; padding: 20px; box-sizing: border-box; }
+		#main fieldset { border: 1px solid #999; margin-bottom: 20px; padding: 15px; }
+		#main legend { font-weight: bold; padding: 0 5px; }
+		#main label { display: block; margin-top: 10px; margin-bottom: 5px; font-size: 13px; color: #555;}
+		#main input[type="text"], #main input[type="email"], #main input[type="password"], 
+		#main input[type="tel"], #main input[type="date"], #main input[type="number"], 
+		#main select, #main textarea { width: 90%; padding: 5px; margin-bottom: 5px; border: 1px solid #ccc;}
+		#main input[type="radio"], #main input[type="checkbox"] { margin-right: 5px; }
+		.form-btn { background: #228B22; color: white; border: none; padding: 5px 15px; cursor: pointer; font-weight: bold;}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="motto">
+				<a href="index.html" class="sitename"><img src="images/blakletterpress.png" height="24" width="142" alt="SiteName"></a>
+				<p><img src="images/header-text.png" height="14" width="218" alt="Text"></p>
+			</div>
+			<div id="logo"><a href="index.html"><img src="images/logo.png" alt="LOGO"></a></div>
+			<div id="searchbar">
+				<form action="#" method="post">
+					<input type="text" value="Enter search query" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+					<input type="submit" value="Search" class="btn">
+				</form>
+			</div>
+		</div>
+		<div id="contents">
+			<div id="main">
+				<div style="background: white; padding: 20px;">
+					<h2 style="font-size: 24px; color: #444; border-bottom: 1px solid #ccc; padding-bottom: 10px;">Đăng ký nhận thông tin</h2>
+					<p style="font-size: 13px; margin-bottom: 20px;">Điền thông tin bên dưới để nhận bản tin định kỳ. Các trường có dấu * là bắt buộc.</p>
+
+					<form action="#" method="POST">
+						<!-- Nhóm 1: Thông tin tài khoản -->
+						<fieldset>
+							<legend>Thông tin tài khoản</legend>
+							<label>Họ và tên *</label>
+							<input type="text" name="fullname" placeholder="Nguyễn Văn A" required>
+
+							<label>Email *</label>
+							<input type="email" name="email" placeholder="ban@example.com" required>
+
+							<label>Mật khẩu * (tối thiểu 8 ký tự)</label>
+							<input type="password" name="password" minlength="8" required>
+
+							<label>Số điện thoại * (10 số, bắt đầu bằng 0)</label>
+							<input type="tel" name="phone" pattern="[0][0-9]{9}" required>
+						</fieldset>
+
+						<!-- Nhóm 2: Thông tin cá nhân -->
+						<fieldset>
+							<legend>Thông tin cá nhân</legend>
+							<label>Ngày sinh *</label>
+							<input type="date" name="dob" style="width: auto;" required>
+
+							<label>Độ tuổi *</label>
+							<input type="number" name="age" style="width: auto;" required>
+
+							<label>Giới tính *</label>
+							<div style="margin-top: 5px;">
+								<input type="radio" name="gender" value="nam"> Nam
+								<input type="radio" name="gender" value="nu" style="margin-left:15px;"> Nữ
+								<input type="radio" name="gender" value="khac" style="margin-left:15px;"> Khác
+							</div>
+						</fieldset>
+
+						<!-- Nhóm 3: Tùy chọn nhận tin -->
+						<fieldset>
+							<legend>Tuỳ chọn nhận tin</legend>
+							<label>Chủ đề quan tâm</label>
+							<div style="margin-top: 5px;">
+								<input type="checkbox" name="topic" value="tintuc"> Tin tức
+								<input type="checkbox" name="topic" value="blog" style="margin-left:15px;"> Blog
+								<input type="checkbox" name="topic" value="sukien" style="margin-left:15px;"> Sự kiện
+							</div>
+
+							<label>Khu vực</label>
+							<select name="region" style="width: auto;">
+								<option value="">-- Chọn khu vực --</option>
+								<option value="hn">Hà Nội</option>
+								<option value="hcm">TP Hồ Chí Minh</option>
+							</select>
+
+							<label>Lời nhắn</label>
+							<textarea name="message" placeholder="Bạn muốn nhận nội dung gì?" rows="4"></textarea>
+
+							<div style="margin-top: 15px;">
+								<input type="checkbox" name="agree" required> Tôi đồng ý với điều khoản sử dụng *
+							</div>
+						</fieldset>
+
+						<button type="submit" class="form-btn">Đăng ký</button>
+						<button type="reset" class="form-btn">Nhập lại</button>
+					</form>
+				</div>
+			</div>
+			
+			<div id="sidebar">
+				<div id="navigation">
+					<div>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<div id="connect">
+						<h2>Connect with us:</h2>
+						<a href="#" class="twitter"></a> <a href="#" class="facebook"></a> <a href="#" class="googleplus"></a>
+					</div>
+				</div>
+				<div class="section">
+					<div id="posts">
+						<h2>Placeholder</h2>
+						<ul>
+							<li>
+								<h5>Title Sample One</h5>
+								<p>Lorem ipsum dolor sit amet...</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+							<li>
+								<h5>Title Sample One</h5>
+								<p>Lorem ipsum dolor sit amet...</p>
+								<a href="news.html" class="more">Read more</a>
+							</li>
+						</ul>
+						<a href="news.html" class="btn2">View More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div>
+				<ul id="featured">
+					<li><a href="index.html" class="home"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="bell"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="globe"></a><p>This website template has been designed...</p></li>
+					<li><a href="index.html" class="pencil"></a><p>This website template has been designed...</p></li>
+				</ul>
+				<p id="footnote">© Copyright © 2011.Company name all rights reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
