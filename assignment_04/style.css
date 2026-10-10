@@ -1,0 +1,292 @@
+/* ==========================================================
+   1. RESET & BIẾN CƠ BẢN (Biết cách thiết lập CSS hiện đại)
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5c4033; /* Màu nâu trầm cổ điển */
+    --secondary-color: #8b5a2b; /* Màu nâu vàng */
+    --bg-color: #fdfbf7; /* Màu nền giấy hơi ngà */
+    --text-color: #333333;
+    --light-bg: #ffffff;
+    --border-color: #eaeaea;
+    --font-heading: 'Georgia', serif;
+    --font-heading: 'Times New Roman', serif;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   2. HEADER & NAVIGATION
+   ========================================================== */
+.site-header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: var(--light-bg);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.site-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================
+   3. LAYOUT CHÍNH (Mobile First)
+   ========================================================== */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+/* Các section trong main */
+main article, 
+main section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #ccc;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+figure {
+    margin-bottom: 1.5rem;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+   4. CÁC DANH SÁCH (GRID LAYOUT)
+   ========================================================== */
+.value-list, 
+.team-list {
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Card thiết kế chung */
+.value-card, 
+.member {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+/* Riêng phần hình ảnh team - bo tròn */
+.member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ==========================================================
+   5. FORM LIÊN HỆ
+   ========================================================== */
+.contact-form p {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================================
+   6. SIDEBAR
+   ========================================================== */
+.sidebar {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    align-self: start; /* Không bị kéo dài theo chiều cao của main */
+}
+
+.recent {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.recent li {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+.recent li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================
+   7. FOOTER
+   ========================================================== */
+.site-footer {
+    background-color: var(--primary-color);
+    color: #f5f5f5;
+    padding: 3rem 1.5rem 1rem;
+}
+
+.site-footer h3 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.footer-cols {
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* ==========================================================
+   8. MEDIA QUERIES (LÀM RESPONSIVE)
+   ========================================================== */
+
+/* Cho Tablet (Màn hình từ 768px trở lên) */
+@media (min-width: 768px) {
+    /* Hiển thị 3 cột cho phần Giá trị và Đội ngũ */
+    .value-list, 
+    .team-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Footer chia làm 2 cột */
+    .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Cho Desktop (Màn hình từ 992px trở lên) */
+@media (min-width: 992px) {
+    /* Chia layout chính: Main chiếm khoảng 70%, Sidebar chiếm 30% */
+    .layout {
+        grid-template-columns: 2.5fr 1fr;
+    }
+
+    /* Bỏ viền dưới ở các section của Desktop cho đẹp */
+    main article, main section {
+        border-bottom: none;
+    }
+
+    /* Footer chia làm 4 cột trên PC */
+    .footer-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
